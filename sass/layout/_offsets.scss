@@ -1,0 +1,9 @@
+
+.section {
+	margin: rem-calc(35 0);
+	padding: rem-calc(133 0);
+	background-color: $section-bg;
+	&_free {
+		padding: 0;
+	}
+}

@@ -1,0 +1,25 @@
+$container-large-width: 1880px;
+$container-medium-width: 1300px;
+
+.wrapper {
+	position: relative;
+	z-index: 2;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+	font-size: 0;
+	padding: rem-calc(0 15);
+	&_large {
+		max-width: $container-large-width;
+		@media screen and(max-width: $break-large) {
+			max-width: 100%;
+		}
+	}
+	&_medium {
+		max-width: $container-medium-width;
+	}
+}

@@ -1,0 +1,31 @@
+
+.header {
+	.header_entry {
+		position: relative;
+		.logo {
+			position: absolute;
+			top: 23px;
+			left: 26px;
+		}
+
+		.menu {
+			position: absolute;
+			top: 23px;
+			right: 26px;
+			display: block;
+			width: 84px;
+			height: 118px;
+			.menu_icon {
+				display: block;
+				width: 84px;
+				height: 118px;
+				background-image: url(../images/header/menu-icon.png);
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+			.menu_container {
+				display: none;
+			}
+		}
+	}
+}

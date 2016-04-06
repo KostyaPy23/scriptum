@@ -1,0 +1,128 @@
+
+.section_content {
+	@extend %clearfix;
+	background: $section-bg;
+}
+
+.page-banner,
+.services {
+	float: left;
+	width: 50%;
+}
+
+.page-banner {
+	position: relative;
+	text-align: center;
+	&_title {
+		display: block;
+		padding: rem-calc(20 38 25 26);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translateY(-50%) translateX(-50%);
+		transform: translateY(-50%) translateX(-50%);
+		font-size: rem-calc(65);
+		font-family: $font-baron-bold;
+		color: $secondary-color;
+		white-space: pre;
+		letter-spacing: 4.3px;
+		@media screen and (max-width: $break-large) {
+			font-size: rem-calc(42);
+		}
+		&:before,
+		&:after {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border: 3px solid $secondary-color;
+			content: "";
+		}
+		&:before {
+			left: 0;
+			top: 0;
+		}
+		&:after {
+			left: -6px;
+			top: -6px;
+		}
+	}
+}
+
+.services {
+	@import "compass/utilities/sprites";
+	@import "icons/*.png";
+	&_list {
+		padding-top: rem-calc(145);
+		margin-left: rem-calc(145);
+		overflow: hidden;
+		@media screen and (max-width: $break-large) {
+			padding-top: rem-calc(50);
+			margin-left: rem-calc(30);
+		}
+		li {
+			display: inline-block;
+			vertical-align: top;
+			width: 225px;
+			// float: left;
+			text-align: center;
+			font-size: 14px;
+			font-family: $font-baron-regular;
+			margin: rem-calc(0 30 100);
+			letter-spacing: 2px;
+			text-shadow: rgb(231, 231, 231) 1px 1px,
+		    rgb(232, 232, 232) 2px 2px,
+		    rgb(233, 233, 233) 3px 3px,
+		    rgb(234, 234, 234) 4px 4px,
+		    rgb(234, 234, 234) 5px 5px,
+		    rgb(235, 235, 235) 6px 6px,
+		    rgb(236, 236, 236) 7px 7px,
+		    rgb(237, 237, 237) 8px 8px,
+		    rgb(237, 237, 237) 9px 9px,
+		    rgb(238, 238, 238) 10px 10px,
+		    rgb(239, 239, 239) 11px 11px,
+		    rgb(240, 240, 240) 12px 12px,
+		    rgb(240, 240, 240) 13px 13px,
+		    rgb(241, 241, 241) 14px 14px,
+		    rgb(242, 242, 242) 15px 15px,
+		    rgb(243, 243, 243) 16px 16px;
+			@media screen and (max-width: $break-large) {
+				margin-bottom: rem-calc(50);
+			}
+		}
+		.icon {
+			display: block;
+			margin: 0 auto;
+			margin-bottom: rem-calc(28);
+			&_design {
+				width: 66px;
+				height: 66px;
+				@include icons-sprite(design);
+			}
+			&_work {
+				width: 73px;
+				height: 73px;
+				@include icons-sprite(work);
+			}
+			&_communication {
+				width: 73px;
+				height: 75px;
+				@include icons-sprite(communication);
+			}
+			&_safety {
+				width: 73px;
+				height: 74px;
+				@include icons-sprite(safety);
+			}
+			&_coordination {
+				width: 81px;
+				height: 81px;
+				@include icons-sprite(coordination);
+			}
+			&_development {
+				width: 78px;
+				height: 77px;
+				@include icons-sprite(development);
+			}
+		}
+	}
+}

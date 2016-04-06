@@ -1,0 +1,25 @@
+
+
+.page-article {
+	@extend %clearfix;
+	text-align: left;
+	font-size: $body-font-size;
+	&_image,
+	&_content {
+		float: left;
+		@media screen and (max-width: $break-medium) {
+			float: none;
+		}
+	}
+
+	&_content {
+		padding: rem-calc(50 0 50 45);
+		width: 590px;
+		@media screen and (max-width: $break-medium) {
+			width: 100%;
+		}
+		&_title {
+			@extend %section-title;
+		}
+	}
+}
